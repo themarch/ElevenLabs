@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   ui:
     build:
@@ -24,4 +24,4 @@ services:
     container_name: elevenlabs-api
     volumes:
       - ./back-end:/usr/src/app
-      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
+      - /usr/src/app/node_modules
