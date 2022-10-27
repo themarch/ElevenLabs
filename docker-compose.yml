@@ -1,0 +1,27 @@
+version: '3'
+services:
+  ui:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    container_name: elevenlabs-front
+    volumes:
+      - ./front-end/src:/usr/app/src
+      - ./front-end/public:/usr/app/public
+    depends_on:
+      - api
+    stdin_open: true
+    tty: true
+
+  api:
+    build:
+      context: ./back-end
+      dockerfile: Dockerfile.dev
+    ports:
+      - 9000:9000
+    container_name: elevenlabs-api
+    volumes:
+      - ./back-end:/usr/src/app
+      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies

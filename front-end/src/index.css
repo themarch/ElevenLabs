@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.landing {
+  background: linear-gradient(107deg,#074084 20%,#16498f 60%,#3a69b9 93%);
+}
+
+.background {
+  background: url(https://eleven-labs.com/static/images/backgrounds/clouds.png) 0 100%/100% no-repeat;
+}
+
+.planete {
+  background-image: linear-gradient(118deg,#cf4c5a,#eea657);
+}
+
+.stats {
+  background: linear-gradient(124deg,#3dab80,#1a7359 51%,#025d71)
+}
