@@ -56,20 +56,20 @@ const Stats = (props) => {
             {data.updateData.refreshStats ?
                 <></>
             : <AddAstronauts />}
-            <div className='flex flex-col mt-16 m-auto mb-16 z-10'>
+            <div className='flex flex-col mt-16 md:mt-auto md:mb-auto m-auto mb-16 z-10'>
                 <div>
                     <div className="w-[300px] iphonese:w-[350px] bg-gray-200 rounded-full h-6 dark:bg-gray-700">
                         <div className="bg-blue-600 h-6 rounded-full" style={{width: `${statsAstronauts ? statsAstronauts : 100}%`}}>
                             <p className='text-white font-semibold pl-4'> {statsAstronauts ? statsAstronauts.toFixed(2) : ""} % </p>
                         </div>
                     </div>
-                    <p className='w-[300px] iphonese:w-[350px] text-white font-medium text-lg mt-8'> Ici ce n'est pas comme chez ElevenLabs, on est bien loin de la parité. <strong> {statsAstronauts ? statsAstronauts.toFixed(2) : ""} </strong> % des Astronautes sont des hommes. </p> 
+                    <p className='w-[300px] iphonese:w-[350px] text-white font-medium text-lg mt-8'> Ici ce n'est pas comme chez ElevenLabs, on est bien loin de la parité. <strong> {statsAstronauts ? statsAstronauts.toFixed(2) : ""} </strong> % des astronautes sont des hommes. </p> 
                 </div>
                 <div className='mt-6'>
-                    <p className='w-[300px] iphonese:w-[350px] text-white font-medium text-lg mt-8'> En moyenne, les Astronautes font en moyenne <strong> {avgFlight ? avgFlight.toFixed(2) : ""} </strong> vols </p> 
+                    <p className='w-[300px] iphonese:w-[350px] text-white font-medium text-lg mt-8'> En moyenne, les astronautes font   <strong> {avgFlight ? avgFlight.toFixed(2) : ""} </strong> vols </p> 
                 </div>
                 <div className='mt-6'>
-                    <p className='w-[300px] iphonese:w-[350px] text-white font-medium text-lg mt-8'> Les Astronautes ont une durée moyenne de vol de <strong>{avgTimeFlight ? avgTimeFlight.toFixed(2) : ""}</strong> jours </p> 
+                    <p className='w-[300px] iphonese:w-[350px] text-white font-medium text-lg mt-8'> Les astronautes ont une durée moyenne de vol de <strong>{avgTimeFlight ? avgTimeFlight.toFixed(2) : ""}</strong> jours </p> 
                 </div>
             </div>
             <div className="background absolute top-0 bottom-0 right-0 left-0 mix-blend-multiply">

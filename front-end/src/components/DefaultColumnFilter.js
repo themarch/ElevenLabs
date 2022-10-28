@@ -8,11 +8,11 @@ const DefaultColumnFilter = ({
   return (
     <input
       value={filterValue || ""}
-      className='w-20'
+      className='w-24'
       onChange={e => {
         setFilter(e.target.value || undefined)
       }}
-      placeholder={`search (${length})`}
+      placeholder={`Chercher (${length})`}
     />
   )
 }
