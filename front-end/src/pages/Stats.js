@@ -56,7 +56,7 @@ const Stats = (props) => {
             {data.updateData.refreshStats ?
                 <></>
             : <AddAstronauts />}
-            <div className='flex flex-col ml-auto mr-auto mt-16 md:mt-2 mb-16 z-10'>
+            <div className='flex flex-col mt-16 m-auto mb-16 z-10'>
                 <div>
                     <div className="w-[300px] iphonese:w-[350px] bg-gray-200 rounded-full h-6 dark:bg-gray-700">
                         <div className="bg-blue-600 h-6 rounded-full" style={{width: `${statsAstronauts ? statsAstronauts : 100}%`}}>
