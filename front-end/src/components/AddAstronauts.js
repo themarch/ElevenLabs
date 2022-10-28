@@ -25,7 +25,7 @@ function AddAstronauts() {
         const add = await axios.post('http://localhost:9000/astronauts', dataPost)
         if (add.data.status === 200) {
           dispatch(setInitial({astronautsData: [add.data.data, ...data], refreshStats: true}))
-          toastNotif("success", '👨‍🚀 Astronaute create !')
+          toastNotif("success", '👨‍🚀 Astronaute créé !')
           e.target.reset();
         }
         else
@@ -53,7 +53,7 @@ function AddAstronauts() {
                       <p className='text-[rgb(34,70,135)] text-xl font-semibold mb-6' onClick={addAstronauts}> Ajoutons un astronaute </p>
                       <div className=''>
                       <p className='text-[rgb(34,70,135)] font-medium'> Name </p>
-                      <input required className='border border-gray-400 w-full h-10 px-2' placeholder='Jean' />
+                      <input required className='border border-gray-400 w-full h-10 px-2' placeholder='Thomas Pesquet' />
                       </div>
                       <div className=''>
                       <p className='text-[rgb(34,70,135)] font-medium'> Country </p>
@@ -61,7 +61,7 @@ function AddAstronauts() {
                       </div>
                       <div className=''>
                       <p className='text-[rgb(34,70,135)] font-medium'> Gender </p>
-                      <input required className='border border-gray-400 w-full h-10 px-2' placeholder='Woman' />
+                      <input required className='border border-gray-400 w-full h-10 px-2' placeholder='Homme' />
                       </div>
                       <div className=''>
                       <p className='text-[rgb(34,70,135)] font-medium'> Flights </p>
@@ -73,10 +73,10 @@ function AddAstronauts() {
                       </div>
                       <div className=''>
                       <p className='text-[rgb(34,70,135)] font-medium'> Flight Time </p>
-                      <input required className='border border-gray-400 w-full h-10 px-2' placeholder='192 (in days)' />
+                      <input required className='border border-gray-400 w-full h-10 px-2' placeholder='192 (en jours)' />
                       </div>
                       <button className='bg-[rgb(34,70,135)] text-white text-lg font-semibold mt-4 px-4 py-2'>
-                      Save Informations
+                      Ajouter l'astronaute
                       </button>
                   </div>
               </form>

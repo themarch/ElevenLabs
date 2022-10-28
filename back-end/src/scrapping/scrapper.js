@@ -10,7 +10,7 @@ const main = async () => {
         const lineSplitted = element.split('"')
         const nbAleatoire = Math.floor(Math.random() * (3 - 0 + 1)) + 0;
         const flightTimeSplitted = lineSplitted[11].replace(/^"(.*)"$/, '$1').split(':')
-        const flightTimeMinute = flightTimeSplitted[0]*24 + (flightTimeSplitted[1]/24) + (flightTimeSplitted[2]/1440)
+        const flightTimeMinute = flightTimeSplitted[0]*24 + (flightTimeSplitted[1]/24) + (flightTimeSplitted[2]/1440) // To get nb days
         if (parseInt(lineSplitted[9].replace(/^"(.*)"$/, '$1'))) {
             dataInserted = {
                 name: lineSplitted[1].replace(/^"(.*)"$/, '$1'),

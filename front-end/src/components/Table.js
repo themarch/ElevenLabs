@@ -19,7 +19,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
   const columns = useMemo(
      () => [
        {
-         Header: 'Country',
+         Header: 'Pays',
          accessor: 'country',
          disableSortBy: true,
          Cell: ({cell}) => {
@@ -35,7 +35,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
         show: false
        },
        {
-         Header: 'Flight Time',
+         Header: 'Temps de vol',
          accessor: 'flightTime',
          disableFilters: true,
          Cell: ({cell}) => {
@@ -46,7 +46,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
         }
        },
        {
-        Header: 'Flights ✈️',
+        Header: 'Vols ✈️',
         accessor: 'flights',
         Cell: ({cell}) => {
           const { value } = cell;
@@ -56,7 +56,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
         }
       },
       {
-        Header: 'Gender',
+        Header: 'Genre',
         accessor: 'gender',
         Cell: ({cell}) => {
           const { value } = cell;
@@ -66,7 +66,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
         }
       },
       {
-        Header: 'Name',
+        Header: 'Nom',
         accessor: 'name',
         Cell: ({cell}) => {
           const { value } = cell;
@@ -76,7 +76,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
         }
       },
       {
-        Header: 'Total Flights',
+        Header: 'Vol total',
         accessor: 'totalFlights',
         disableFilters: true,
         Cell: ({cell}) => {
@@ -87,7 +87,7 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
         }
       },
       {
-        Header: 'Planete',
+        Header: 'Planète',
         accessor: 'planete',
         Cell: ({cell}) => {
           const { value } = cell;
@@ -249,12 +249,12 @@ import DefaultColumnFilter from "./DefaultColumnFilter"
            <div className='flex mb-8 ml-2'>
                 <div className='flex'>
                   <GrPrevious onClick={() => gotoPage(pageIndex - 1)} disabled={!canPreviousPage}className='cursor-pointer'/>
-                    <p className='ml-6 mr-6 mt-[-3px]'> Page <input className='rounded-md w-8 text-center ml-1 mr-1' type="select" value={pageIndex + 1} onChange={onChangeInInput} /> of {pageOptions.length} </p>
+                    <p className='ml-6 mr-6 mt-[-3px]'> Page <input className='rounded-md w-8 text-center ml-1 mr-1' type="select" value={pageIndex + 1} onChange={onChangeInInput} /> sur {pageOptions.length} </p>
                   <GrNext onClick={() => gotoPage(pageIndex + 1)} disabled={!canNextPage} className='cursor-pointer'/>  
                 </div>
                 <div className='flex ml-12 mt-[-3px]'>
                   <input className='rounded-md w-8 text-center' type="select" value={pageSize} onChange={onChangeInSelect} />
-                  <p className='ml-2'> per page </p>
+                  <p className='ml-2'> par page </p>
                 </div>
           </div>
          </div>

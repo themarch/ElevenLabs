@@ -5,7 +5,10 @@ const InitMongoose = async (mongoUrl) => {
     try {
         await mongoose.connect(mongoUrl);
     } catch (e) {
-        console.log('Error', e)
+        if (process.env.NODE_ENV === 'dev') {   
+            console.log(`🔴 ${e}`)
+        }
+        console.log('Error with database connection')
     }
 }
 
